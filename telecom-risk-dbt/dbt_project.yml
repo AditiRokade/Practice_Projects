@@ -1,0 +1,23 @@
+name: telecom_risk
+version: '1.0.0'
+config-version: 2
+profile: telecom_risk
+
+model-paths: ["models"]
+seed-paths: ["seeds"]
+test-paths: ["tests"]
+macro-paths: ["macros"]
+clean-targets: ["target", "dbt_packages"]
+
+models:
+  telecom_risk:
+    staging:
+      +materialized: view
+    intermediate:
+      +materialized: table
+    marts:
+      +materialized: table
+
+seeds:
+  telecom_risk:
+    +quote_columns: false

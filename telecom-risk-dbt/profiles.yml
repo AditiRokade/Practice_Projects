@@ -1,0 +1,7 @@
+telecom_risk:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: target/telecom_risk.duckdb
+      threads: 1
